@@ -1,0 +1,3 @@
+[submodule "assets/javascripts/vis"]
+	path = assets/javascripts/vis
+	url = https://github.com/davidmcclure/neatline-visjs.git

@@ -1,0 +1,16 @@
+
+build:
+  - clean
+  - copy
+
+compile:
+  - concat
+  - less
+
+compile:min:
+  - compile
+  - cssmin
+  - uglify
+
+default:
+  - compile:min
