@@ -14,11 +14,7 @@
   'bodyclass' => 'neatline show'
 )); ?>
 
-<!-- Exhibit. -->
-<div class="exhibit">
-  <?php echo nl_getExhibitMarkup(); ?>
-</div>
-
+<!-- Narrative. -->
 <div id="neatline-narrative" class="narrative">
 
   <!-- Title. -->
@@ -26,9 +22,14 @@
     <h1><?php echo nl_getExhibitField('title'); ?></h1>
   </div>
 
-  <!-- Narrative. -->
+  <!-- Text. -->
   <?php echo nl_getExhibitField('narrative'); ?>
 
+</div>
+
+<!-- Exhibit. -->
+<div class="exhibit">
+  <?php echo nl_getExhibitMarkup(); ?>
 </div>
 
 <?php echo foot(); ?>

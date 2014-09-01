@@ -1,0 +1,50 @@
+
+/**
+ * @package     omeka
+ * @subpackage  neatline-NeatLight
+ * @copyright   2014 David McClure
+ * @license     http://www.apache.org/licenses/LICENSE-2.0.html
+ */
+
+.exhibit {
+
+  float: left;
+
+  #neatline-map {
+    height: 100vh;
+    width: 100 - @text-width;
+  }
+
+}
+
+.narrative {
+
+  float: right;
+  overflow-y: scroll;
+  padding: 2em;
+  width: @text-width;
+  height: 100vh;
+
+  .page-header {
+    font-family: Oswald, @font-family-sans-serif;
+    margin-top: 0;
+  }
+
+}
+
+@media (max-width: @screen-sm-min) {
+
+  .exhibit, .narrative {
+    float: none;
+    width: 100vw;
+  }
+
+  .narrative {
+    height: auto;
+  }
+
+  .exhibit {
+    height: 800px;
+  }
+
+}
