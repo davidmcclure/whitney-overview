@@ -1,7 +1,7 @@
 
 /**
  * @package     omeka
- * @subpackage  whitney-detail
+ * @subpackage  whitney-overview
  * @copyright   2014 David McClure
  * @license     http://www.apache.org/licenses/LICENSE-2.0.html
  */
@@ -13,9 +13,8 @@ module.exports = {
   },
 
   dist: {
-    files: {
-      'style.css': 'assets/stylesheets/style.less'
-    }
+    src: 'assets/stylesheets/style.less',
+    dest: 'style.css'
   }
 
 };
