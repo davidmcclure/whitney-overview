@@ -12,6 +12,7 @@
 
 body {
   margin: 0;
+  background: darken(white, 0.5%);
 }
 
 div.container {
@@ -19,6 +20,21 @@ div.container {
   width: auto;
 }
 
-p {
-  margin: 1em 0;
+div.exhibit {
+
+  float: left;
+  width: 1px;
+
+  #neatline, #neatline-map {
+    height: 100%;
+    width: 100%;
+  }
+
+}
+
+div.narrative {
+  float: right;
+  overflow-y: scroll;
+  padding: 2em;
+  max-width: @width-text;
 }
