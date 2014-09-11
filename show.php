@@ -19,7 +19,8 @@
 
   <!-- Title. -->
   <div class="page-header">
-    <h1><?php echo nl_getExhibitField('title'); ?></h1>
+    <h1 class="brand">Anne Whitney Abroad, 1867-1868</h1>
+    <h1 class="title">The Continental Perspective</h1>
   </div>
 
   <!-- Text. -->
