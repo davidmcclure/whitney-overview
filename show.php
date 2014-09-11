@@ -18,10 +18,13 @@
 <div id="neatline-narrative" class="narrative">
 
   <!-- Title. -->
-  <div class="page-header">
+  <div class="header">
     <h1 class="brand">Anne Whitney Abroad, 1867-1868</h1>
     <h1 class="title">The Continental Perspective</h1>
   </div>
+
+  <!-- Logo. -->
+  <div class="logo"></div>
 
   <!-- Text. -->
   <?php echo nl_getExhibitField('narrative'); ?>
