@@ -33,11 +33,7 @@
   <?php echo nl_getExhibitMarkup(); ?>
 </div>
 
-<!-- Zoom buttons. -->
-<div id="zoom">
-  <div class="btn home"></div>
-  <div class="btn in"></div>
-  <div class="btn out"></div>
-</div>
+<!-- Zoom. -->
+<div id="zoom"></div>
 
 <?php echo foot(); ?>

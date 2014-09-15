@@ -19,6 +19,9 @@ Neatline.module('Zoom', function(Zoom) {
     render: function() {
       return (
         <div className="buttons">
+          <div className="btn home" onClick={this.home}>
+            <i className="fa fa-home" />
+          </div>
           <div className="btn in" onClick={this.zoomIn}>
             <i className="fa fa-plus" />
           </div>
@@ -35,6 +38,14 @@ Neatline.module('Zoom', function(Zoom) {
      */
     componentWillMount: function() {
       this.setState({ map: Neatline.request('MAP:getMap') });
+    },
+
+
+    /**
+     * Go back to the default focus/zoom.
+     */
+    home: function() {
+      console.log('home');
     },
 
 
