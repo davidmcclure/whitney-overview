@@ -29,7 +29,7 @@ Neatline.module('Vis', function(Vis) {
     },
 
     options: {
-      maxHeight: 400
+      stack: false
     }
 
   };
