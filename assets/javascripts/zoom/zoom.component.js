@@ -45,7 +45,14 @@ Neatline.module('Zoom', function(Zoom) {
      * Go back to the default focus/zoom.
      */
     home: function() {
-      console.log('home');
+
+      var exhibit = Neatline.g.neatline.exhibit
+
+      this.state.map.setCenter(
+        exhibit.map_focus.split(','),
+        exhibit.map_zoom
+      );
+
     },
 
 
