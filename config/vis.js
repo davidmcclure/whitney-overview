@@ -28,6 +28,11 @@ Neatline.module('Vis', function(Vis) {
 
     },
 
+    stacking: {
+      unit: 'days',
+      duration: 10
+    },
+
     options: {
       stack: false
     }
