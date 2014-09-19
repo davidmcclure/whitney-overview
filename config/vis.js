@@ -34,7 +34,8 @@ Neatline.module('Vis', function(Vis) {
     },
 
     options: {
-      stack: false
+      stack: false,
+      zoomMin: 604800000
     }
 
   };
