@@ -26,14 +26,7 @@ Neatline.module('Lines', function(Lines) {
      * @param {Object} args
      */
     highlight: function(args) {
-      console.log(args.model.get('tags'));
-      //if (args.model.hasTag('bbox')) {
-
-        //// Visually highlight the word.
-        //var record = this.getWordRecord(args.model);
-        //if (record) Neatline.execute('MAP:showHighlight', record);
-
-      //}
+      this.syncSiblings(args.model, 'showHighlight');
     },
 
 
@@ -43,24 +36,47 @@ Neatline.module('Lines', function(Lines) {
      * @param {Object} args
      */
     unhighlight: function(args) {
-      console.log(args.model.get('tags'));
-      //if (args.model.hasTag('bbox')) {
-
-        //// Visually unhighlight the word.
-        //var record = this.getWordRecord(args.model);
-        //if (record) Neatline.execute('MAP:hideHighlight', record);
-
-      //}
+      this.syncSiblings(args.model, 'hideHighlight');
     },
 
 
     /**
      * Get all line siblings.
      *
-     * @param {Object} record
+     * @param {String} tag
      */
-    getSiblings: function(record) {
-      // TODO
+    getSiblings: function(tag) {
+
+      // Get the map collection.
+      var records = Neatline.request('MAP:getRecords');
+
+      // Get all records with the tag.
+      return records.filter(function(record) {
+        return record.hasTag(tag);
+      });
+
+    },
+
+
+    /**
+     * Sync unhighlights.
+     *
+     * @param {Object} model
+     * @param {String} command
+     */
+    syncSiblings: function(model, command) {
+
+      _.each(model.get('tags'), _.bind(function(tag) {
+        if (tag.match(/^line\d+$/)) {
+
+          // Highlight the other records on the line.
+          _.each(this.getSiblings(tag), function(record) {
+            Neatline.execute('MAP:'+command, record);
+          });
+
+        }
+      }, this));
+
     }
 
 
