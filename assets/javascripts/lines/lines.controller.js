@@ -70,7 +70,7 @@ Neatline.module('Lines', function(Lines) {
      */
     syncSiblings: function(model, command) {
 
-      _.each(model.get('tags'), _.bind(function(tag) {
+      _.each(model.splitTags(), _.bind(function(tag) {
         if (tag.match(/^line\d+$/)) {
 
           // Highlight the other records on the line.
