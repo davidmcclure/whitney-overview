@@ -26,7 +26,9 @@ Neatline.module('Lines', function(Lines) {
      * @param {Object} args
      */
     highlight: function(args) {
-      this.syncSiblings(args.model, 'showHighlight');
+      if (args.model.hasTag('line')) {
+        this.syncSiblings(args.model, 'showHighlight');
+      }
     },
 
 
@@ -36,7 +38,9 @@ Neatline.module('Lines', function(Lines) {
      * @param {Object} args
      */
     unhighlight: function(args) {
-      this.syncSiblings(args.model, 'hideHighlight');
+      if (args.model.hasTag('line')) {
+        this.syncSiblings(args.model, 'hideHighlight');
+      }
     },
 
 
