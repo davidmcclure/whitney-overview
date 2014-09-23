@@ -48,10 +48,14 @@ Neatline.module('Zoom', function(Zoom) {
 
       var exhibit = Neatline.g.neatline.exhibit
 
+      // Recenter the map.
       this.state.map.setCenter(
         exhibit.map_focus.split(','),
         exhibit.map_zoom
       );
+
+      // Clear the route.
+      Backbone.history.navigate('', { replace: true });
 
     },
 
