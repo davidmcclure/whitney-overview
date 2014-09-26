@@ -8,11 +8,7 @@
 
 Neatline.on('start', function() {
 
-  var map = $('#neatline-map');
-
   var resize = function() {
-    map.height($(window).height());
-    map.width($(window).width());
     Neatline.execute('MAP:updateSize');
   };
 
