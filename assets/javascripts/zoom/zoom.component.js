@@ -56,6 +56,7 @@ Neatline.module('Zoom', function(Zoom) {
 
       // Clear the route.
       Backbone.history.navigate('', { replace: true });
+      Neatline.vent.trigger('unselect');
 
     },
 
