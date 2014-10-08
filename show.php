@@ -21,7 +21,7 @@
   <div class="page-header">
     <h1 class="brand">Anne Whitney Abroad, 1867-1868</h1>
     <h1 class="title">The Continental Perspective</h1>
-    <p class="tagline">A companion to Jacqueline Marie Musacchio, "<a href="http://www.19thc-artworldwide.org/index.php/autumn14/musacchio-introduction" target="_blank">Mapping the 'White, Marmorean Flock': Anne Whitney Abroad, 1867-1868</a>," Nineteenth-Century Art Worldwide 13, no. 2 (2014).</p>
+    <p class="tagline">A companion to <a href="http://www.19thc-artworldwide.org/index.php/autumn14/musacchio-introduction" target="_blank">Jacqueline Marie Musacchio, "Mapping the 'White, Marmorean Flock': Anne Whitney Abroad, 1867-1868," Nineteenth-Century Art Worldwide 13, no. 2 (2014)</a>.</p>
   </div>
 
   <!-- Text. -->
