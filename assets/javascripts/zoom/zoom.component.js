@@ -54,9 +54,17 @@ Neatline.module('Zoom', function(Zoom) {
         exhibit.map_zoom
       );
 
-      // Clear the route.
+      // Clear the route, unselect.
       Backbone.history.navigate('', { replace: true });
-      Neatline.vent.trigger('unselect');
+
+      // TODO|hack
+      var selected = Neatline.Events.__controller.selected;
+
+      if (selected) {
+        Neatline.vent.trigger('unselect', {
+          model: selected, source: 'ZOOM'
+        });
+      }
 
     },
 
